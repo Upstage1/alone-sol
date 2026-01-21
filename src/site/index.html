@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visitor SOL stream</title>
+    <meta
+        name="description"
+        content="The interstellar guest has arrived. $VISITOR — the first cosmic guest on Solana. Catch it before it’s gone"
+    />
+
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- <link rel="stylesheet" href="./css/timer.css"> -->
+</head>
+<body>
+    
+    <div class="body">
+        <div class="head-title">
+            <img src="./img/pump.fun.png" alt="">
+            <div class="title">
+                PUMP.FUN
+            </div>
+            <div class="subtitle-live">
+                <span>Live</span>
+                <!-- <span data-num-participants></span> -->
+            </div>
+        </div>
+        <div class="bot-status">
+            <p id="bot-status">
+                <span class="status-indicator status-paused"></span><span>Loading</span>
+            </p>
+        </div>
+        <div class="bot-info bot-mood">
+            <div class="bot-info__title">&#128173; Mood</div>
+            <div class="bot-info__desct" data-bot-mood>
+                <span data-bot-mood-icon>&#127992;</span>
+                <span data-bot-mood-status>Loading</span>
+            </div>
+        </div>
+        <div class="bot-info">
+            <div class="bot-info__title">💬 Recent Messages</div>
+            <div class="bot-info__desct">
+                Пишите в чате на стриме и бот вам ответит
+            </div>
+        </div>
+        <div class="panel">
+            <div class="panel-title">
+                &#128125; Chat with an alien
+            </div>
+            <div class="ansvers-ai" id="analysis-container"></div>
+            <div class="panel-message">
+                <div class="panel-title panel-title__message">
+                    Alien Answers
+                    <div class="dots">
+                        <span class="dot visible">•</span>
+                        <span class="dot">•</span>
+                        <span class="dot">•</span>
+                    </div>
+                </div>
+                <textarea class="panel-message__textarea" name="alien-ansvers" id="alien-ansvers" data-ansvers-id placeholder="Write a message"></textarea>
+            </div>
+        </div>
+    </div>
+    <script src="./js/script.js"></script>
+</body>
+</html>

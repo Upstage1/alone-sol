@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pump.fun ChatGPT Bot Dashboard</title>
+    <link rel="stylesheet" href="css/control.style.css">
+    <script src="js/control.script.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🤖 Pump.fun ChatGPT Bot</h1>
+            <p>Real-time chat analysis and sentiment tracking</p>
+            
+            <div class="control-panel">
+                <button class="control-btn pause-btn" id="pause-btn" onclick="pauseBot()">
+                    ⏸️ Pause Bot
+                </button>
+                <button class="control-btn resume-btn" id="resume-btn" onclick="resumeBot()" disabled>
+                    ▶️ Resume Bot
+                </button>
+                <button class="control-btn" onclick="loadAllData()">
+                    🔄 Refresh All
+                </button>
+                <div class="control-panel__mode">
+                    <p>Смена режима работы:</p>
+                    <select name="mode" id="mode">
+                        <option value="nornal" selected>Нормальный</option>
+                        <option value="music">Музыка</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        
+        <div class="status-grid">
+            <div class="status-card">
+                <h3>🤖 Bot Status</h3>
+                <div id="bot-status">
+                    <span class="status-indicator status-offline"></span>
+                    <span>Checking...</span>
+                </div>
+                <div id="bot-details" style="margin-top: 15px; font-size: 0.9rem; color: #a0a0a0;"></div>
+            </div>
+            
+            <div class="status-card">
+                <h3>🌐 Connection Status</h3>
+                <div id="connection-status">
+                    <span class="status-indicator status-offline"></span>
+                    <span>Checking...</span>
+                </div>
+                <div id="connection-details" style="margin-top: 15px; font-size: 0.9rem; color: #a0a0a0;"></div>
+            </div>
+        </div>
+        
+        <div class="data-section">
+            <div class="messages-panel">
+                <div class="panel-header">
+                    <h3>💬 Recent Messages</h3>
+                    <button class="refresh-btn" onclick="loadMessages()">Refresh</button>
+                </div>
+                <div class="scroll-container" id="messages-container">
+                    <div class="loading">Loading messages...</div>
+                </div>
+            </div>
+            
+            <div class="analysis-panel">
+                <div class="panel-header">
+                    <h3>🧠 Latest Analysis</h3>
+                    <button class="refresh-btn" onclick="loadAnalysis()">Refresh</button>
+                </div>
+                <div class="scroll-container" id="analysis-container">
+                    <div class="loading">Loading analysis...</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="status-card">
+            <h3>📊 Statistics</h3>
+            <div class="stats-grid" id="stats-container">
+                <div class="loading">Loading statistics...</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
